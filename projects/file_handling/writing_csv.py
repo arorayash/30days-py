@@ -27,3 +27,9 @@ with open("data.csv", "a") as csvfile:
     fieldnames = ["ABC", "PQR"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writerow({"ABC": 123, "PQR": 456})
+    
+with open("data.csv", "a") as csvfile:
+    fieldnames = ["Head1", "Head2"]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow({"Head1": "Apples", "Head2": "Mangoes"})
