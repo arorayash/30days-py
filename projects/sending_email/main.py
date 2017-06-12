@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import datetime
 
+
 class MsgUser():
     user_details = []
     messages = []
@@ -11,7 +12,7 @@ class MsgUser():
         name = name[0].upper() + name[1:].lower()
         amount = "%0.2f" %(amount)
         today = datetime.date.today()
-        today_formatted = text = today.strftime('%-m/%-d/%y')
+        today_formatted = today.strftime('%-m/%-d/%y')
         details = {
             "name": name,
             "amount": amount,
