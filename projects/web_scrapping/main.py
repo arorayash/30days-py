@@ -13,7 +13,7 @@ def scrap():
     res_feeds = BeautifulSoup(res.text, "html.parser")
     feed_list = []
     for feed in res_feeds.findAll("div", {"class": "resource"}):
-        title = beautify(feed.findAll("h3")[0].text).replace(" ", '')
+        title = beautify(feed.findAll("h3")[0].text)
         link = feed.findAll('a')[0]["href"]
         desc = beautify(feed.find('p', {"class":"resourceDescription"}).text)
         feedDict = {
